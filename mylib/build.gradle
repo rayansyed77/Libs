@@ -1,6 +1,5 @@
-
 plugins {
-    id 'com.android.library'
+    id 'com.android.library' version '7.4.0'
     id 'maven-publish'
 }
 
@@ -33,9 +32,17 @@ publishing {
             groupId = 'com.rayansyed.libs'
             artifactId = 'mylib'
             version = '1.0'
+
+            // Publish the release AAR
             afterEvaluate {
                 from components.release
             }
         }
     }
+}
+
+// Make sure repositories are defined so JitPack can find Android plugin
+repositories {
+    google()
+    mavenCentral()
 }
