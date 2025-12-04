@@ -1,0 +1,19 @@
+NEW METHOD TO SETUP ANDROID IDE ✅
+1
+nano $PREFIX/etc/apt/sources.list
+enter
+
+
+2
+deb [trusted=yes] https://packages.androidide.com/apt/termux-main/ stable main
+
+
+3
+cd && pkg upg && idesetup -c
+
+
+4
+cd && pkg upgrade && pkg install wget && wget https://github.com/MrIkso/AndroidIDE-NDK/raw/main/ndk-install.sh --no-verbose --show-progress -N && chmod +x ndk-install.sh && bash ndk-install.sh
+
+and select sdk version 34
+compiler version 24 mean number 8
